@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap');
+
+.Header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Alumni Sans Inline One', cursive;
+    background-color: rgba(0, 0, 255, 0.6);
+    color: #FFFF00;
+    height: 80px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.Header a {
+    text-decoration: none;
+    color: #FFFF00;
+    margin: 0 5px;
+}
+
+.Header a.active {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.Image {
+    height: 25px;
+    border: 1px solid #FFFF00;
+}
+
+.theme {
+    margin-right: 10px;
+    color: #00FF00;
+}
