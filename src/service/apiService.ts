@@ -3,11 +3,11 @@ import {baseURL, token} from "../constans";
 
 export type IRes<T> = Promise<AxiosResponse<T>>
 
-const axiosServise=axios.create({baseURL})
+const apiService=axios.create({baseURL})
 
-axiosServise.interceptors.request.use(request=>
+apiService.interceptors.request.use(request=>
 {request.headers.Authorization = `Bearer ${token}`
 return request
 })
 
-export {axiosServise}
+export {apiService}

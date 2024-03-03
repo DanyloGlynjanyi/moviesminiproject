@@ -6,12 +6,14 @@ import {Rating} from "@mui/material";
 import {IMovie} from "../../../interface";
 
 import css from './Movie.module.css'
+
 interface IProps {
     movie: IMovie
 }
 const Movie:FC<IProps> = ({movie}) => {
     const {original_title,poster_path,id,vote_average}=movie;
     const navigate = useNavigate();
+
 
 
     const nav = () => {

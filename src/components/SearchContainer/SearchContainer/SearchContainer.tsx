@@ -1,9 +1,10 @@
 import {useParams, useSearchParams} from "react-router-dom";
-import {FC, useEffect, useState} from "react";
+import React, {FC, useEffect, useState} from "react";
 
 import {IMovie} from "../../../interface";
-import {searchServise} from "../../../servises";
-import {Movies} from "../../MoviesContainer/Movies";
+import {searchService} from "../../../service";
+import {Movies} from "../../MoviesContainer";
+
 
 
 interface IProps {
@@ -20,7 +21,7 @@ const SearchContainer:FC<IProps> = ({word}) => {
 
 
     useEffect(() => {
-        searchServise.getBySearch(word, page).then(({data})=>setMovie(data.results))
+        searchService.getBySearch(word, page).then(({data})=>setMovie(data.results))
     }, [word, page]);
     console.log('movie', movie);
 

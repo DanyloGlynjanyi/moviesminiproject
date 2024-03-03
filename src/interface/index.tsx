@@ -1,4 +1,4 @@
 export * from './genresInterfase'
-export * from './infoMovie'
+export * from './infoInterface'
 export * from './movieInterfase'
 export * from './searchInterfase'

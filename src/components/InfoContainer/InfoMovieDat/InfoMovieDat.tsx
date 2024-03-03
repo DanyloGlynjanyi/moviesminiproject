@@ -1,4 +1,4 @@
-import {IInfo} from "../../../interface/infoMovie";
+import {IInfo} from "../../../interface/infoInterface";
 import {FC} from "react";
 
 import {Badge, Box, Rating} from "@mui/material";

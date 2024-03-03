@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 import {IGenres} from "../../../interface";
-import {genresServise} from "../../../servises";
+import {genreService} from "../../../service";
 import {Genre} from "../Genre";
 
 import css from './Genres.module.css'
@@ -9,7 +9,7 @@ import css from './Genres.module.css'
 const Genres = () => {
     const [genres, setGenres] = useState<IGenres[]>([])
     useEffect(() => {
-        genresServise.getAll().then(({data})=>setGenres(data.genres))
+        genreService.getAll().then(({data})=>setGenres(data.genres))
     }, []);
     return (
         <div className={css.genres_wrap}>

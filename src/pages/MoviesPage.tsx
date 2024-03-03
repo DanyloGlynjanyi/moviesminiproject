@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useSearchParams} from "react-router-dom";
 
-import {movieServise} from "../servises";
+import {movieService} from "../service";
 
 import {IMovie} from "../interface";
 import {Movies} from "../components";
@@ -14,7 +14,7 @@ const MoviesPage = () => {
 
 
     useEffect(() => {
-        movieServise.getAll(page).then(({data:{results}})=>setMovies(results))
+        movieService.getAll(page).then(({data:{results}})=>setMovies(results))
     }, [page]);
 
     return (

@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useParams, useSearchParams} from "react-router-dom";
 
 import {IMovie} from "../../interface";
-import {genresServise} from "../../servises";
+import {genreService} from "../../service";
 import {Movies} from "../MoviesContainer";
 
 
@@ -15,7 +15,7 @@ const GenreLists = () => {
     const page=query.get('page');
 
     useEffect(() => {
-        genresServise.getByIdMovie(page, id).then(({data:{results}})=>setMoviesGenre(results))
+        genreService.getByIdMovie(page, id).then(({data:{results}})=>setMoviesGenre(results))
     }, [page, id]);
 
 
