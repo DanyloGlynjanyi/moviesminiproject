@@ -10,7 +10,7 @@ import css from "./SearchForm.module.css";
 
 const SearchForm = () => {
     const {handleSubmit, reset, register} = useForm()
-    const [word, setWord] = useState<string>('A')
+    const [word, setWord] = useState<string>('')
 
     const search = (query: ISearchWord) => {
         setWord(query.word)
